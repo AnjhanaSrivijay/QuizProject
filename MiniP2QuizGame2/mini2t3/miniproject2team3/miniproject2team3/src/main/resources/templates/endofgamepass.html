@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/css/style2.css"/>
+
+</head>
+<body class="body">
+<div class="header">
+    <h1> Quiz</h1>
+    Congratulations! You Won!
+
+    You have scored: <p th:text="${finalscore} + ' Out of 8.'" >  </p>
+
+    End of the Game
+<br>
+
+<a input type="submit" th:value href="/quiz"> <br>
+    Try Again <br>  </a>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>MiniProject02 - Team 3</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+
+<body class="body">
+<div class="header">
+    <h1> Quiz</h1>
+</div>
+
+<p th:text="${question.prompt}"></p>
+
+<form th:each="answer,iStat:${question.answers}" action="/answer" method="post"> <br>
+   <input type="hidden" name="answerNumber" th:value="${iStat.index}" >
+    <input type="submit" th:value="${answer}">
+
+
+</form>
+</body>
+</html>
